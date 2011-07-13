@@ -1,0 +1,25 @@
+<h1>Listing Conferences in Session</h1>
+
+<table>
+  <tr>
+    <th>Filename</th>
+    <th>Inprogress</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @conferences.each do |conference| %>
+  <tr>
+    <td><%= conference.filename %></td>
+    <td><%= conference.inprogress %></td>
+    <td><%= link_to 'Show', conference %></td>
+    <td><%= link_to 'Edit', edit_conference_path(conference) %></td>
+    <td><%= link_to 'Destroy', conference, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Conference', new_conference_path %>

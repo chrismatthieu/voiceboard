@@ -1,0 +1,25 @@
+<%= form_for(@voicememo) do |f| %>
+  <% if @voicememo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@voicememo.errors.count, "error") %> prohibited this voicememo from being saved:</h2>
+
+      <ul>
+      <% @voicememo.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :conference_id %><br />
+    <%= f.text_field :conference_id %>
+  </div>
+  <div class="field">
+    <%= f.label :callerid %><br />
+    <%= f.text_field :callerid %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

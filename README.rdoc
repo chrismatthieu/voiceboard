@@ -1,0 +1,13 @@
+= Voice Board 
+
+The Voice Board application is an asynchronous voice messaging platform powered by Tropo (http://tropo.com). It allows callers to join in on live conference calls or leave messages for their friends at at event.
+
+This is a Tropo (http://tropo.com) Scripting application written in Ruby that runs in the Tropo cloud and interfaces with this Ruby on Rails application to handle database interaction via an API.  The voice messages are stored on Amazon S3.
+
+== Setup
+
+Rename config/config.yml.sample to config/config.yml and edit your AWS key information and bucket
+Create a developer account on Tropo and a Scripting App using the Ruby script in tropo_voicememo.rb
+Run the Rails app on localhost using Tunnlr (http://tunnlr.com) or deploy it to Heroku or other hosting provider
+
+Have Fun!

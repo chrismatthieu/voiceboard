@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Conference:</b>
+  <%= @voicememo.conference_id %>
+</p>
+
+<p>
+  <b>Callerid:</b>
+  <%= @voicememo.callerid %>
+</p>
+
+
+<%= link_to 'Edit', edit_voicememo_path(@voicememo) %> |
+<%= link_to 'Back', voicememos_path %>

@@ -1,0 +1,25 @@
+<h1>Listing voicememos</h1>
+
+<table>
+  <tr>
+    <th>Conference</th>
+    <th>Callerid</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @voicememos.each do |voicememo| %>
+  <tr>
+    <td><%= voicememo.conference_id %></td>
+    <td><%= voicememo.callerid %></td>
+    <td><%= link_to 'Show', voicememo %></td>
+    <td><%= link_to 'Edit', edit_voicememo_path(voicememo) %></td>
+    <td><%= link_to 'Destroy', voicememo, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Voicememo', new_voicememo_path %>

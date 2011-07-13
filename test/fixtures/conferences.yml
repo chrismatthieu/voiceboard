@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  filename: MyString
+  inprogress: false
+
+two:
+  filename: MyString
+  inprogress: false

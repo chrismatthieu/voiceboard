@@ -4,8 +4,8 @@ require 'rest-client'
 
 myvoice = "Kate"
 
-apiurl = 'http://web1.tunnlr.com:11053' #test
-# apiurl = 'http://voiceboard.heroku.com' #production
+#apiurl = 'http://web1.tunnlr.com:11053' #test
+apiurl = 'http://voiceboard.heroku.com' #production
 
 
 say "welcome to the burning man voice board!", {:voice => myvoice}
@@ -52,7 +52,7 @@ while $currentCall.isActive do
     
       say "starting new voice board conference, press pound to stop recording", {:voice => myvoice}
     
-      startCallRecording "http://web1.tunnlr.com:11053/uploadfile", {
+      startCallRecording apiurl + '/uploadfile', {
           :format => 'audio/mp3'}
     
       conference confid, {

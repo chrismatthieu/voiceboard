@@ -6,7 +6,7 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(:default, Rails.env) if defined?(Bundler)
 
-CONFIG = YAML.load_file("config/config.yml")[RAILS_ENV]
+CONFIG = YAML.load_file("config/config.yml")[Rails.env]
 
 module Voiceboard
   class Application < Rails::Application

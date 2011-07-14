@@ -4,7 +4,7 @@ require 'rest-client'
 
 myvoice = "Kate"
 
-#apiurl = 'http://web1.tunnlr.com:11053' #test
+# apiurl = 'http://web1.tunnlr.com:11053' #test
 apiurl = 'http://voiceboard.heroku.com' #production
 
 
@@ -69,7 +69,7 @@ while $currentCall.isActive do
   
     if confdata
       #join existing conference
-      confname = confjson[0]["conference"]["filename"]
+      confname = confdata[0]["conference"]["filename"]
       say "joining existing voice board conference", {:voice => myvoice}
       conference confname, {
         :terminator => "#",

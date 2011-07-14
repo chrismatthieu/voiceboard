@@ -6,8 +6,8 @@ This is a Tropo (http://tropo.com) Scripting application written in Ruby that ru
 
 == Setup
 
-Rename config/config.yml.sample to config/config.yml and edit your AWS key information and bucket
-Create a developer account on Tropo and a Scripting App using the Ruby script in tropo_voicememo.rb
-Run the Rails app on localhost using Tunnlr (http://tunnlr.com) or deploy it to Heroku or other hosting provider
+* Rename config/config.yml.sample to config/config.yml and edit your AWS key information and bucket
+* Create a developer account on Tropo and a Scripting App using the Ruby script in tropo_voicememo.rb
+* Run the Rails app on localhost using Tunnlr (http://tunnlr.com) or deploy it to Heroku or other hosting provider
 
 Have Fun!

@@ -5,7 +5,7 @@ class VoicememosController < ApplicationController
     
     # Build array of conference call recordings that have not yet been listened to by the callerid
     @voicememos = []
-    @conferences = Conference.all
+    @conferences = Conference.find(:all, :order => "created_at desc")
     @conferences.each do |conference|
       if conference.voicememos.find(:first, :conditions => ['callerid = ?', params[:callerid]]).nil?
         @voicememos.push(conference)

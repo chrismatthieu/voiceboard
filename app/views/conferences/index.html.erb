@@ -1,25 +1,30 @@
-<h1>Listing Conferences in Session</h1>
+<h1>Voice Board</h1>
 
-<table>
-  <tr>
-    <th>Filename</th>
-    <th>Inprogress</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<script type="text/javascript">
+  $("body").append(
+   $("<div/>")
+    .css("width","210px")
+    .callme({
+      apiKey: "C17D167F-09C6-4E4C-A3DD-2025D48BA243",
+      numberToDial: "app:9996135896",
+      buttonTextReady: "Listen Live!",
+      slideOpen:true
+    })
+  )
+ </script>
 
+<ul class='playlist'> 
+<% count = 0%>	
 <% @conferences.each do |conference| %>
-  <tr>
-    <td><%= conference.filename %></td>
-    <td><%= conference.inprogress %></td>
-    <td><%= link_to 'Show', conference %></td>
-    <td><%= link_to 'Edit', edit_conference_path(conference) %></td>
-    <td><%= link_to 'Destroy', conference, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
+	<li><a href="http://voicememo-uploads.s3.amazonaws.com/<%= conference.filename %>" rel="<%= @photos[count]%>">
+		<% if conference.inprogress %>
+			LIVE
+		<% else %>
+			<%= conference.updated_at%>
+		<% end %>
+	</a></li> 
+	<% count += 1 %>
 <% end %>
-</table>
+</ul>
 
-<br />
 
-<%= link_to 'New Conference', new_conference_path %>

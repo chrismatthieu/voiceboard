@@ -1,0 +1,28 @@
+<h1>Voice Board</h1>
+
+<table>
+
+<% @conferences.each do |conference| %>
+  <tr>
+    <td>
+		<audio controls="controls">
+		  <source src="http://voicememo-uploads.s3.amazonaws.com/<%= conference.filename %>" type="audio/mp3" />
+		  Your browser does not support the audio element.
+		</audio>
+    <td>
+		<% if conference.inprogress %>
+			LIVE
+		<% else %>
+			<%= conference.updated_at%>
+		<% end %>
+	</td>
+    <td><%# link_to 'Show', conference %></td>
+    <td><%# link_to 'Edit', edit_conference_path(conference) %></td>
+    <td><%# link_to 'Destroy', conference, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%# link_to 'New Conference', new_conference_path %>

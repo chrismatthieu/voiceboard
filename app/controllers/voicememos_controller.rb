@@ -13,7 +13,7 @@ class VoicememosController < ApplicationController
     end  
 
     respond_to do |format|
-      format.html # index.html.erb
+      format.html 
       format.xml  { render :xml => @voicememos }
       format.json  { render :json => @voicememos }
     end

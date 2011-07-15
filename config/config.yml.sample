@@ -1,14 +1,20 @@
 development:
-  aws_access_key_id: 0J5HEXT0313CQHNJRYR2
-  aws_secret_access_key: afI36k8icPw2iuVyDz80AE8MapnXM0erLl9MUNBo
-  aws_bucket: voicememo-uploads
+  aws_access_key_id: your_access_key
+  aws_secret_access_key: your_secret_key
+  aws_bucket: your_s3_bucket
+  flickr_key: your_flickr_key
+  flickr_secret: your_flickr_secret
 
 test:
-  aws_access_key_id: 0J5HEXT0313CQHNJRYR2
-  aws_secret_access_key: afI36k8icPw2iuVyDz80AE8MapnXM0erLl9MUNBo
-  aws_bucket: voicememo-uploads
+  aws_access_key_id: your_access_key
+  aws_secret_access_key: your_secret_key
+  aws_bucket: your_s3_bucket
+  flickr_key: your_flickr_key
+  flickr_secret: your_flickr_secret
 
 production:
-  aws_access_key_id: 0J5HEXT0313CQHNJRYR2
-  aws_secret_access_key: afI36k8icPw2iuVyDz80AE8MapnXM0erLl9MUNBo
-  aws_bucket: voicememo-uploads
+  aws_access_key_id: your_access_key
+  aws_secret_access_key: your_secret_key
+  aws_bucket: your_s3_bucket
+  flickr_key: your_flickr_key
+  flickr_secret: your_flickr_secret

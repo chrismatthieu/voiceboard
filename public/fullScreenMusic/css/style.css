@@ -1,0 +1,655 @@
+/** Default CSS **/
+/* http://meyerweb.com/eric/tools/css/reset/ */
+/* v1.0 | 20080212 */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+body {
+	line-height: 1.5;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
+	text-decoration: none;
+}
+del {
+	text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* --------------------------------------------------------------
+
+   typography.css
+   * Sets up some sensible default typography.
+
+-------------------------------------------------------------- */
+
+/* Default font settings.
+   The font-size percentage is of 16px. (0.75 * 16px = 12px) */
+html { font-size:100.01%; }
+body {
+  font-size: 75%;
+  color: #222;
+  background: #fff;
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+
+
+/* Headings
+-------------------------------------------------------------- */
+
+h1,h2,h3,h4,h5,h6 { font-weight: normal; color: #333; }
+
+h1 { font-size: 3em; line-height: 1; margin-bottom: 0.5em; }
+h2 { font-size: 2em; margin-bottom: 0.75em; }
+h3 { font-size: 1.5em; line-height: 1; margin-bottom: 1em; }
+h4 { font-size: 1.2em; line-height: 1.25; margin-bottom: 1.25em; }
+h5 { font-size: 1em; font-weight: bold; margin-bottom: 1.5em; }
+h6 { font-size: 1em; font-weight: bold; }
+
+h1 img, h2 img, h3 img,
+h4 img, h5 img, h6 img {
+  margin: 0;
+}
+
+
+/* Text elements
+-------------------------------------------------------------- */
+
+p           { margin: 0 0 1.5em; }
+p img.left  { float: left; margin: 1.5em 1.5em 1.5em 0; padding: 0; }
+p img.right { float: right; margin: 1.5em 0 1.5em 1.5em; }
+
+a:focus,
+a:hover     { color: #000; }
+a           { color: #009; text-decoration: underline; }
+
+blockquote  { margin: 1.5em; color: #666; font-style: italic; }
+strong      { font-weight: bold; }
+em,dfn      { font-style: italic; }
+dfn         { font-weight: bold; }
+sup, sub    { line-height: 0; }
+
+abbr,
+acronym     { border-bottom: 1px dotted #666; }
+address     { margin: 0 0 1.5em; font-style: italic; }
+del         { color:#666; }
+
+pre         { margin: 1.5em 0; white-space: pre; }
+pre,code,tt { font: 1em 'andale mono', 'lucida console', monospace; line-height: 1.5; }
+
+
+/* Lists
+-------------------------------------------------------------- */
+
+li ul,
+li ol       { margin: 0; }
+ul, ol      { margin: 0 1.5em 1.5em 0; padding-left: 3.333em; }
+
+ul          { list-style-type: disc; }
+ol          { list-style-type: decimal; }
+
+dl          { margin: 0 0 1.5em 0; }
+dl dt       { font-weight: bold; }
+dd          { margin-left: 1.5em;}
+
+
+/* Tables
+-------------------------------------------------------------- */
+
+table       { margin-bottom: 1.4em; width:100%; }
+th          { font-weight: bold; }
+thead th    { background: #c3d9ff; }
+th,td,caption { padding: 4px 10px 4px 5px; }
+tr.even  { background: #e5ecf9; }
+tfoot       { font-style: italic; }
+caption     { background: #eee; }
+
+
+/* Misc classes
+-------------------------------------------------------------- */
+
+.small      { font-size: .8em; margin-bottom: 1.875em; line-height: 1.875em; }
+.large      { font-size: 1.2em; line-height: 2.5em; margin-bottom: 1.25em; }
+.hide       { display: none; }
+
+.quiet      { color: #666; }
+.loud       { color: #000; }
+.highlight  { background:#ff0; }
+.added      { background:#060; color: #fff; }
+.removed    { background:#900; color: #fff; }
+
+.first      { margin-left:0; padding-left:0; }
+.last       { margin-right:0; padding-right:0; }
+.top        { margin-top:0; padding-top:0; }
+.bottom     { margin-bottom:0; padding-bottom:0; }
+
+
+
+/* `Clear Floated Elements
+----------------------------------------------------------------------------------------------------*/
+
+/* http://sonspring.com/journal/clearing-floats */
+
+.clear {
+	clear: both;
+	display: block;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+
+/* http://perishablepress.com/press/2009/12/06/new-clearfix-hack */
+
+.clearfix:after {
+	clear: both;
+	content: ' ';
+	display: block;
+	font-size: 0;
+	line-height: 0;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+
+/*
+	The following zoom:1 rule is specifically for IE6 + IE7.
+	Move to separate stylesheet if invalid CSS is a problem.
+*/
+* html .clearfix,
+*:first-child+html .clearfix {
+	zoom: 1;
+}
+
+
+/** OpenPlayer **/
+
+body{
+    overflow-x:hidden;
+}
+#openPlayer.page-list #controls .main-button{
+    height:32px;
+    width:32px;
+    margin:14px 3px;
+    float:left;
+}
+
+#controls #loading, #controls #position{
+    position:absolute;
+    top:0px;
+    left:0px;
+    width:0px;
+    height:47px;
+}
+
+.playlist li ul{
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+
+/**  Page List **/
+
+.openPlayerContent{
+    overflow:hidden;
+    opacity:0;
+}
+
+.playlist.page-list{
+    overflow:auto;
+}
+
+#openPlayer.page-list{
+    background:none;
+    display:none;
+}
+
+.playlist #openPlayer.page-list{
+    display:block;
+}
+
+
+.playlist.page-list{
+    margin:0;
+    padding:0;
+    background-color:#fafafa;
+    position:relative;
+    top:40px;
+}
+
+.playlist.page-list li{
+    height:80px;
+    list-style:none;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #dfdfdf;
+    color:#ccc;
+    font-size:36px;
+    position:relative;
+    background: transparent url(../images/media_bg.png) repeat-x 0 0 scroll;
+}
+
+.playlist.page-list li a{
+    color:#888;
+    font-size:26px;
+    text-decoration:none;
+    display:block;
+    margin: 22px 0 22px 20px;
+    text-shadow: 0 1px 0 #fff;
+    position:relative;
+    z-index:2;
+    outline:none;
+}
+
+.playlist.page-list li:hover{
+    background: transparent url(../images/media_bg.png) repeat-x 0 -80px scroll;
+}
+
+.playlist.page-list li.playing{
+    background: transparent url(../images/media_bg.png) repeat-x 0 -160px scroll;
+}
+
+.playlist.page-list li.playing a{
+    color:#fff;
+    text-shadow: 0 1px 0 #ccc;
+}
+
+.playlist #openPlayer.page-list{
+    position:absolute;
+    top:0;
+    left:0;
+    background:none;
+    border:none;
+    width:100%;
+    z-index:1;
+}
+
+#openPlayer.page-list #statusbar, #openPlayer.page-list #loading,
+#openPlayer.page-list #position{
+    position:absolute;
+    top:0;
+    left:0;
+    height:80px;
+    border:none;
+    margin:0;
+    width:100%
+}
+
+#openPlayer.page-list #loading{
+    background: transparent url(../images/media_bg.png) repeat-x 0 -320px scroll;
+}
+
+#openPlayer.page-list #position{
+    background: transparent url(../images/media_bg.png) repeat-x 0 -240px scroll;
+}
+
+#openPlayer.page-list #play, .playlist #openPlayer #next,
+.playlist #openPlayer #previous{
+    display:none;
+}
+
+.controls-container.page-list{
+    background: transparent url(../images/controlbar_bg.png) repeat-x 0 0px scroll;
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:40px;
+}
+
+.controls-container.page-list #controls{
+    width:114px;
+    margin: 0 auto;
+    padding-top:12px;
+}
+
+.controls-container.page-list #controls #play{
+    background: transparent url(../images/play_plain.png) no-repeat 0 0 scroll;
+    height:16px;
+    width:32px;
+    display:block;
+    float:left;
+}
+
+.controls-container.page-list #controls #play.pause{
+    background: transparent url(../images/play_plain.png) no-repeat 0 -16px scroll;
+    height:16px;
+    width:32px;
+    display:block;
+    float:left;
+}
+
+.controls-container.page-list #controls #next{
+    background: transparent url(../images/next_plain.png) no-repeat 0 2px scroll;
+    height:32px;
+    width:32px;
+    display:block;
+    float:left;
+}
+
+.controls-container.page-list #controls #previous{
+    background: transparent url(../images/previous_plain.png) no-repeat 0 2px scroll;
+    height:32px;
+    width:32px;
+    display:block;
+    float:left;
+}
+
+
+ #openPlayer.page-list #timing{
+    float:right;
+    font-size:14px;
+    margin: 10px 20px 0 0;
+     z-index:1;
+     position:relative;
+}
+
+#position-control{
+    width:100%;
+    height:80px;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:5;
+}
+
+
+/** Fullscreen Player **/
+#fullscreen-bg{
+    width:100%;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:-1;
+    overflow:hidden;
+}
+#fullscreen-bg img {
+    left:0;
+    position:absolute;
+    top:0;
+    width:100%;
+    z-index:-1;
+    overflow:hidden;
+}
+
+#openPlayer.fullscreen{
+    background:url("../images/player_bg.png") repeat scroll 0 0 transparent;
+	bottom:15%;
+	padding:20px;
+	position:absolute;
+	width:90%;
+	z-index:5;
+}
+#openPlayer.fullscreen #media-description{
+    font-size:60px;
+    color:#fff;
+    margin: 0 30px 25px 0;
+    position:relative;
+    float:left;
+    cursor: pointer !important;
+}
+
+#openPlayer.fullscreen #statusbar{
+    width:85%;
+    height:10px;
+    position:absolute;
+    bottom:30px;
+    z-index:6;
+    clear:both;
+}
+
+#openPlayer.fullscreen #position{
+    background-color:#8ab2d8;
+    height:100%;
+    position:absolute;
+    top:0;
+    left:0;
+}
+
+#openPlayer.fullscreen #loading{
+    background-color:#ccc;
+    height:100%;
+    position:absolute;
+    top:0;
+    left:0;
+}
+
+#openPlayer.fullscreen #timing{
+    float:left;
+    font-size:20px;
+    color:#555;
+    position:absolute;
+    bottom: 22px;
+	right:20px;
+}
+
+#openPlayer.fullscreen #next, #openPlayer.fullscreen #previous{
+    height:100px;
+    width:30px;
+    position:fixed;
+    top:45%;
+}
+
+#openPlayer.fullscreen #next{
+    background: #333 url(../images/next_full.png) no-repeat 5px 35px scroll;
+    right:0;
+}
+
+#openPlayer.fullscreen #previous{
+    background: #333 url(../images/previous_full.png) no-repeat 7px 35px scroll;
+    left:0;
+}
+
+
+.play-container{
+   position: absolute;
+   top:0;
+   right:201px;
+   height:32px;
+   width:32px;
+   background-color:#333;
+}
+
+openPlayer.page-list.play-container{
+    background-color:transparent;
+}
+#play.fullscreen{
+    display:block;
+    width:32px;
+    height:16px;
+    margin-top:8px;
+    background: #333 url(../images/play_plain.png) no-repeat 10px 0px scroll;
+}
+
+#play.fullscreen.pause{
+    background: #333 url(../images/play_plain.png) no-repeat 10px -16px scroll;
+}
+
+
+/** Volume **/
+
+#volume{
+    position: absolute;
+    top:0;
+    right:50px;
+    height:32px;
+    width:150px;
+    background-color:#333;
+}
+
+#volume.page-list, #volume.minimal{
+    background-color:transparent;
+    z-index:10;
+}
+
+#volume.page-list{
+    padding-top:5px;
+}
+#volume .outer{
+    height:5px;
+    width:100px;
+    margin:13px auto;
+    position:relative;
+    float:left;
+}
+
+#volume .inner{
+    height:5px;
+    width:100%;
+    background-color:#000;
+}
+
+#volume .value{
+    height:5px;
+    width:100px;
+    position:absolute;
+    top:0;
+    background-color:#ccc;
+}
+
+#volume #min{
+    display:block;
+    float:left;
+    height:32px;
+    width:16px;
+    padding-right:6px;
+    padding-left:3px;
+    background: #333 url(../images/min.png) no-repeat 6px 11px scroll;
+
+}
+
+#volume #max{
+    display:block;
+    float:left;
+    height:32px;
+    width:16px;
+    padding-right:6px;
+    background: #333 url(../images/max.png) no-repeat 6px 11px scroll;
+}
+
+#volume.page-list #max, #volume.page-list #min, #volume.minimal #max, #volume.minimal #min{
+    background-color:transparent;
+}
+
+#openPlayer.minimal #volume{
+    display:none;
+}
+
+#loading-indicator{
+    height:18px;
+    width:120px;
+    font-size:12px;
+    color:#000;
+    text-align:center;
+    opacity:0;
+    background-color: #FFFFAA;
+    -webkit-border-bottom-right-radius: 3px;
+    -webkit-border-bottom-left-radius: 3px;
+    -moz-border-radius-bottomright: 3px;
+    -moz-border-radius-bottomleft: 3px;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    margin:0 auto;
+}
+
+/** Playlist **/
+ul.playlist{
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+
+
+/** Minimal **/
+
+.playlist.minimal{
+    margin:20px 40px !important;
+    width:300px;
+}
+
+.playlist.minimal li{
+    position:relative;
+    font-weight:normal;
+    padding:4px;
+    background: transparent url(../images/playlist_play.png) 0px 4px no-repeat scroll;
+}
+
+.playlist.minimal li.playing.pause{
+    background:  transparent url(../images/playlist_pause.png) 0px 4px no-repeat scroll;
+}
+
+.playlist.minimal li:hover{
+    background-color:#FFFADA;
+}
+
+.playlist.minimal li a{
+    color:#333;
+    height:16px;
+    text-decoration:none;
+    outline:none;
+    padding-left:20px;
+    margin: 3px 5px 10px 5px;
+    display:block;
+    width:80%;
+}
+
+.minimal #timing{
+    position:absolute;
+    top:0;
+    right:0;
+    float:right;
+    color:#888;
+}
+
+.minimal .playing, .minimal .pause.playing{
+    background-color: #F8F8FF; !important;
+}
+
+
+.minimal.playlist li.playing.pause{
+    background:  #F8F8FF  url(../images/playlist_pause.png) 0px 4px no-repeat scroll;
+}
+
+/**Sound Manager **/
+#soundmanager-debug{
+    display:none;
+    height:0;
+    width:0;
+    overflow:hidden;
+}

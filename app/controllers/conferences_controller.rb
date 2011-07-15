@@ -1,11 +1,27 @@
 class ConferencesController < ApplicationController
+
   # GET /conferences
   # GET /conferences.xml
   def index
     @conferences = Conference.where("inprogress = ?", true)
 
     respond_to do |format|
-      format.html # index.html.erb
+      format.html { 
+        @conferences = Conference.find(:all, :order => 'created_at desc', :limit => 10) 
+
+        FlickRaw.api_key = CONFIG['flickr_key']
+        FlickRaw.shared_secret = CONFIG['flickr_secret']
+
+        @photos = []
+        
+        # Search API = http://hanklords.github.com/flickraw/FlickRaw/Flickr/Photos.html#method-i-search
+        # flickr.photos.getRecent(:tags => 'pony', :per_page => '2').each do |p|
+        # flickr.photos.search(:text => 'burning man', :per_page => '2').each do |p|
+        flickr.photos.search(:tags => 'bm2010', :per_page => '10').each do |p|
+          info = flickr.photos.getInfo(:photo_id => p.id) # retrieve additional details
+          @photos.push(FlickRaw.url_b(info))
+        end
+      }
       format.xml  { render :xml => @conferences }
       format.json  { render :json => @conferences }
     end
@@ -95,3 +111,6 @@ class ConferencesController < ApplicationController
     end
   end
 end
+
+
+

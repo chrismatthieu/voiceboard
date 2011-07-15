@@ -1,0 +1,20 @@
+development:
+  aws_access_key_id: 0J5HEXT0313CQHNJRYR2
+  aws_secret_access_key: afI36k8icPw2iuVyDz80AE8MapnXM0erLl9MUNBo
+  aws_bucket: voicememo-uploads
+  flickr_key: 1b11172ad1619e7dc8edd2d1483af4ae
+  flickr_secret: ce61b9d0a7b47322
+  
+test:
+  aws_access_key_id: 0J5HEXT0313CQHNJRYR2
+  aws_secret_access_key: afI36k8icPw2iuVyDz80AE8MapnXM0erLl9MUNBo
+  aws_bucket: voicememo-uploads
+  flickr_key: 1b11172ad1619e7dc8edd2d1483af4ae
+  flickr_secret: ce61b9d0a7b47322
+
+production:
+  aws_access_key_id: 0J5HEXT0313CQHNJRYR2
+  aws_secret_access_key: afI36k8icPw2iuVyDz80AE8MapnXM0erLl9MUNBo
+  aws_bucket: voicememo-uploads
+  flickr_key: 1b11172ad1619e7dc8edd2d1483af4ae
+  flickr_secret: ce61b9d0a7b47322

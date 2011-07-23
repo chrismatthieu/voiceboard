@@ -6,7 +6,7 @@ Voiceboard::Application.routes.draw do
   match '/upload' => 'upload#index'
   match '/stream/:id' => 'upload#stream'
   
-  match '/api/smsnumbers.:format' => 'api#smsnumbers'
+  match '/api/smsnumbers/:phone.:format' => 'api#smsnumbers'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

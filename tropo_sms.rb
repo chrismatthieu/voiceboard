@@ -4,7 +4,7 @@
 require 'open-uri'
 require 'json'
 
-url = 'http://voiceboard.heroku.com/api/smsnumbers.json'
+url = 'http://voiceboard.heroku.com/api/smsnumbers/' + $currentCall.callerID + '.json'
 mymessage = $currentCall.initialText
             
 #JSON data to a Ruby hash

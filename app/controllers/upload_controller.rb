@@ -4,6 +4,7 @@ class UploadController < ApplicationController
   end
   def uploadFile
       post = DataFile.save(params[:filename])
+      # post = DataFile.save(params[:upload])
        @conference = Conference.find(:first, :conditions => ['inprogress = ?', true])
        if @conference
          @conference.inprogress = false

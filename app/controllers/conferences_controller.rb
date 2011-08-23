@@ -1,5 +1,9 @@
 class ConferencesController < ApplicationController
 
+  def offline
+    render :layout => false
+  end
+
   # GET /conferences
   # GET /conferences.xml
   def index

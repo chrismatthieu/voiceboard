@@ -5,8 +5,8 @@ require 'rest-client'
 myvoice = "Kate"
 
 # apiurl = 'http://web1.tunnlr.com:11053' #test
-apiurl = 'http://voiceboard.heroku.com' #production
-
+# apiurl = 'http://voiceboard.heroku.com' #production
+apiurl = "http://50.16.198.185"
 
 say "welcome to the burning man voice board!", {:voice => myvoice}
 
@@ -38,7 +38,8 @@ while $currentCall.isActive do
           lastmsg = memo["conference"]["id"]
           memorec = RestClient.get apiurl + '/conferences/' + memo["conference"]["id"].to_s + '.json?callerid=' + $currentCall.callerID
           memorecdata = JSON.parse(memorec)
-          say "http://voicememo-uploads.s3.amazonaws.com/" + memorecdata["conference"]["filename"]
+          say apiurl + "/data/" + memorecdata["conference"]["filename"]
+          # say "http://voicememo-uploads.s3.amazonaws.com/" + memorecdata["conference"]["filename"]
         end
       end
   

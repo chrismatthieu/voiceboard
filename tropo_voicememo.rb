@@ -38,6 +38,7 @@ while $currentCall.isActive do
           lastmsg = memo["conference"]["id"]
           memorec = RestClient.get apiurl + '/conferences/' + memo["conference"]["id"].to_s + '.json?callerid=' + $currentCall.callerID
           memorecdata = JSON.parse(memorec)
+          
           say apiurl + "/data/" + memorecdata["conference"]["filename"]
           # say "http://voicememo-uploads.s3.amazonaws.com/" + memorecdata["conference"]["filename"]
         end

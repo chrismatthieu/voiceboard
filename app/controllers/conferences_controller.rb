@@ -7,6 +7,9 @@ class ConferencesController < ApplicationController
   # GET /conferences
   # GET /conferences.xml
   def index
+    
+    if DEPLOY::CLOUDTYPE == 'public'      
+    
     @conferences = Conference.where("inprogress = ?", true)
 
     respond_to do |format|
@@ -29,6 +32,11 @@ class ConferencesController < ApplicationController
       format.xml  { render :xml => @conferences }
       format.json  { render :json => @conferences }
     end
+    
+  else 
+    redirect_to :action => "offline"
+  end
+    
   end
 
   # GET /conferences/1
